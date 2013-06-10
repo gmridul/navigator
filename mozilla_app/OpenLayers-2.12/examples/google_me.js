@@ -6,13 +6,12 @@ function init() {
         projection: new OpenLayers.Projection("EPSG:900913")
     });
     
-    var osm = new OpenLayers.Layer.OSM();            
     var gmap = new OpenLayers.Layer.Google("Google Streets");
     
-    map.addLayers([osm, gmap]);
+    map.addLayers([gmap]);
     //map.Size(150,150);
 
-    map.addControl(new OpenLayers.Control.LayerSwitcher());
+    //map.addControl(new OpenLayers.Control.LayerSwitcher());
 
     map.setCenter(
         new OpenLayers.LonLat(81.0, 24.9).transform(
