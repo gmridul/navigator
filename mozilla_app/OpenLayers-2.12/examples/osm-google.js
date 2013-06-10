@@ -14,7 +14,7 @@ function init() {
     map.addControl(new OpenLayers.Control.LayerSwitcher());
 
     map.setCenter(
-        new OpenLayers.LonLat(10.2, 48.9).transform(
+        new OpenLayers.LonLat(81.0, 24.9).transform(
             new OpenLayers.Projection("EPSG:4326"),
             map.getProjectionObject()
         ), 
