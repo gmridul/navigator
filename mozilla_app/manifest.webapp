@@ -1,0 +1,1 @@
+{ "name": "geolocation", "description": "This app allows you to check your geolocation!", "launch_path": "/webpage.html", "developer": { "name": "Rob Lauer", "url": "http://roblauer.me" }, "icons": {"128" : "web.jpg"}, "default_locale": "en" }
