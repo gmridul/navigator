@@ -98,7 +98,7 @@ $(document).ready(function() {
 
 });
 
-function initLayerList() {
+/*function initLayerList() {
     $('#layerspage').page();
     $('<li>', {
             "data-role": "list-divider",
@@ -124,9 +124,9 @@ function initLayerList() {
     map.events.register("addlayer", this, function(e) {
         addLayerToList(e.layer);
     });
-}
+}*/
 
-function addLayerToList(layer) {
+/*function addLayerToList(layer) {
     var item = $('<li>', {
             "data-icon": "check",
             "class": layer.visibility ? "checked" : ""
@@ -149,4 +149,4 @@ function addLayerToList(layer) {
             $(item).toggleClass('checked');
         }
     });
-}
+}*/
