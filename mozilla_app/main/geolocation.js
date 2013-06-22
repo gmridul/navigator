@@ -10,7 +10,11 @@ var vector = new OpenLayers.Layer.Vector('vector');
 map.addLayers([layer, vector]);
 
 map.setCenter(
+<<<<<<< HEAD
     new OpenLayers.LonLat(72.8258,18.9647).transform(
+=======
+    new OpenLayers.LonLat(72.845, 18.452).transform(
+>>>>>>> 9adf6c722908fc4b6b73f85edaa378b20105669c
         new OpenLayers.Projection("EPSG:4326"),
         map.getProjectionObject()
     ), 12
