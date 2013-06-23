@@ -1,3 +1,4 @@
+//Part of this code is inspired from Openlayers examples.
 // Start with the map page
 window.location.replace(window.location.href.split("#")[0] + "#mappage");
 
@@ -31,13 +32,15 @@ $(document).ready(function() {
     $(window).bind("orientationchange resize pageshow", fixContentHeight);
     document.body.onload = fixContentHeight;
 
-    // Map zoom  
+    // Map zoom using Openlayers functions.  
     $("#plus").click(function(){
         map.zoomIn();
     });
     $("#minus").click(function(){
         map.zoomOut();
     });
+    
+    //For 'locating' current position.
     $("#locate").click(function(){
         var control = map.getControlsBy("id", "locate-control")[0];
         if (control.active) {
@@ -46,15 +49,19 @@ $(document).ready(function() {
             control.activate();
         }
     });
-    $("#track").onclick(function() {
-		vector.removeAllFeatures();
-		geolocate.deactivate();
-		if (this.checked) {
-			geolocate.watch = true;
-			firstGeolocation = true;
-			geolocate.activate();
+    
+    //For 'tracking' the position. Need to check this. 
+    $("#track").click(function(){
+        var control = map.getControlsBy("id", "track-control")[0];
+        if (control.active) {
+            control.watch = true;
+            control.activate();
+        }
+        else {
+			control.activate();
 		}
-	});
+    });
+        
     
     $('#popup').live('pageshow',function(event, ui){
         var li = "";

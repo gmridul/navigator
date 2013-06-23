@@ -1,5 +1,4 @@
-var apiKey = "AqTGBsziZHIJYYxgivLBf0hVdrAk9mWO5cQcb8Yux8sW5M8c8opEC2lZqKR1ZZXf";
-
+//Part of this code is inspired from Openlayers examples.
 // initialize map when page ready
 var map;
 var gg = new OpenLayers.Projection("EPSG:4326");
@@ -34,6 +33,17 @@ var init = function (onSelectFeatureFunction) {
             timeout: 7000
         }
     });
+    
+    //No need for two different variables. Still using them. Cheking for the track option still to be done.
+    var geotrack = new OpenLayers.Control.Geolocate({
+        id: 'track-control',
+        geolocationOptions: {
+            enableHighAccuracy: false,
+            maximumAge: 0,
+            timeout: 7000
+        }
+    });
+    
     // create map
     map = new OpenLayers.Map({
         div: "map",
@@ -60,6 +70,8 @@ var init = function (onSelectFeatureFunction) {
         center: new OpenLayers.LonLat(0, 0),
         zoom: 1
     });
+    map.addControl(geolocate);
+    map.addControl(geotrack);
 
     var style = {
         fillOpacity: 0.1,
