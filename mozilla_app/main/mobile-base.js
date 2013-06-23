@@ -17,8 +17,8 @@ var init = function (onSelectFeatureFunction) {
             graphicYOffset: -26
         })
     });
-
-    var sprinters = getFeatures();
+    
+	var sprinters = getFeatures();
     sprintersLayer.addFeatures(sprinters);
 
     var selectControl = new OpenLayers.Control.SelectFeature(sprintersLayer, {

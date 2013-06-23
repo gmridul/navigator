@@ -40,6 +40,8 @@ $(document).ready(function() {
         map.zoomOut();
     });
     
+    var firstGeolocation = true;
+        
     //For 'locating' current position.
     $("#locate").click(function(){
         var control = map.getControlsBy("id", "locate-control")[0];
@@ -53,8 +55,10 @@ $(document).ready(function() {
     //For 'tracking' the position. Need to check this. 
     $("#track").click(function(){
         var control = map.getControlsBy("id", "track-control")[0];
+        control.deactivate();
         if (control.active) {
             control.watch = true;
+            firstGeolocation = true;
             control.activate();
         }
         else {
