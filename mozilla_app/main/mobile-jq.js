@@ -40,7 +40,7 @@ $(document).ready(function() {
         map.zoomOut();
     });
     
-    var firstGeolocation = true;
+    //var firstGeolocation = true;
         
     //For 'locating' current position.
     $("#locate").click(function(){
@@ -58,7 +58,7 @@ $(document).ready(function() {
         control.deactivate();
         if (control.active) {
             control.watch = true;
-            firstGeolocation = true;
+            //firstGeolocation = true;
             control.activate();
         }
         else {

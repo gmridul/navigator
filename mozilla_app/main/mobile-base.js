@@ -70,8 +70,8 @@ var init = function (onSelectFeatureFunction) {
         center: new OpenLayers.LonLat(0, 0),
         zoom: 1
     });
-    map.addControl(geolocate);
-    map.addControl(geotrack);
+    //map.addControl(geolocate);
+    //map.addControl(geotrack);
 
     var style = {
         fillOpacity: 0.1,
